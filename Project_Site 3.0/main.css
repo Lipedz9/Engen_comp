@@ -1,0 +1,61 @@
+body {
+    background-color: rgba(173, 216, 230, 0.5); /* Fundo azul claro com 50% de opacidade */
+    color: #000000; /* Letras pretas */
+    font-family: Arial, sans-serif; /* Fonte Arial */
+
+}
+
+h1 {
+    text-align: center; /* Título centralizado */
+}
+
+p, ul {
+    text-align: justify; /* Textos justificados */
+}
+
+ul {
+    list-style: none; /* Remove bullets das listas */
+    padding: 0; /* Remove a borda padrão da lista */
+}
+
+ul li::before {
+    content: "• "; /* Adiciona bullets manualmente antes do conteúdo dos itens da lista */
+    color: black; /* Define a cor dos bullets como preta */
+}
+
+.image-grid {
+    display: grid; /* Define o layout da div como grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 10px; /* Espaço entre as imagens */
+    margin: 20px 0; /* Margem superior e inferior de 20px, sem margem lateral */
+}
+
+.image-grid div {
+    text-align: center; /* Centraliza o conteúdo dentro das divs da grid */
+}
+
+.image-grid img {
+    width: 300px; /* Largura fixa para todas as imagens */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+}
+
+.image-grid a {
+    display: block; /* Transforma o link em um bloco, ocupando toda a largura disponível */
+    text-align: center; /* Centraliza o texto abaixo das imagens */
+    margin-top: 5px; /* Adiciona uma margem superior para separação */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #000000; /* Define a cor do texto dos links como preta */
+    background-color: #f0f0f0; /* Cor de fundo igual ao rodapé */
+    padding: 5px; /* Adiciona um espaçamento interno aos links */
+}
+
+footer {
+    padding: 10px; /* Adiciona um espaçamento interno dentro do rodapé */
+    margin-top: 20px; /* Espaço adicional acima do rodapé */
+    background-color: #f0f0f0; /* Cor de fundo opcional para rodapé */
+}
+
+footer p{
+    text-align: center; /* Centraliza o texto do rodapé */
+}
