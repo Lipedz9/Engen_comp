@@ -1,0 +1,21 @@
+/*1. Elaborar um algoritmo que leia números enquanto forem positivos e imprima quantos
+números foram digitados.*/
+
+
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int np = 0,i;
+
+    while(np >= 0)
+    {
+    printf("Digite um número positivo: \n");
+    scanf("%d", &np);
+        i++;
+    }
+    printf ("numero invalido\n");
+return 0;
+}
