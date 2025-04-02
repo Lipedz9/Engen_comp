@@ -1,0 +1,26 @@
+/*2. Elaborar um algoritmo que leia números enquanto forem positivos e imprima a média
+dos números digitados.*/
+
+
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int num = 0,i,media, soma = 0;
+
+    while(num >= 0)
+    {
+        printf("Digite números positivos:\n");
+        scanf("%d", &num);
+        i++;
+        soma = num + soma;
+        media = soma / i;
+        printf("Valor total é: %d\n ", soma);
+        printf("A média dos valores é: %d\n\n", media);
+    }
+    printf("Valor invalido!!\n\n");
+
+return 0;
+}
