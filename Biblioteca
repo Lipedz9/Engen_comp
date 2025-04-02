@@ -19,7 +19,8 @@ Sair do sistema.*/
 int main()
 {
     setlocale(LC_ALL, "portuguese");
-    int esc = 0;
+    int esc = 0, expl;
+    char tit [30], aut[30], busc[30];
     do{
         printf("\n*************MENU*************\n");
         printf("** 1 - Cadastrar novo livro **\n");
@@ -30,14 +31,44 @@ int main()
         printf("** 6 - Sair                 **\n");
         printf("******************************\n");
         scanf("%d", &esc);
-        switch(esc)
-        {
-            case 1:
-        }
-        }
-    while(esc == 6);
-    //cadastro
+            //cadastro
+            if(esc == 1)
+                {
+                printf("Digite o Titulo do Livro: \n\n");
+                scanf("%s", &tit);
+                printf("Digite o nome do autor: \n\n");
+                scanf("%s", &aut);
+                printf("Digite a quantidade de exemplares: \n\n");
+                scanf("%d", &expl);
+                printf("Livro cadastrado com sucesso!!\n");
+                }
+            if(esc ==  2)
+                {
+                 printf("Digite o titulo do livro:\n\n");
+                 scanf("%s", &busc);
+                }
+            if(esc == 3)
+                {
+                printf("Digite o titulo do livro:\n\n");
+                scanf("%s", &busc);
+                //verificar quantidade de exemplares do mesmo pesquisado, caso maior que 0 diminuir 1, senao apresentar erro...
+                }
+            if(esc ==  4)
+                {
+                 printf("Digite o titulo do livro:\n\n");
+                 scanf("%s", &busc);
+                 // aumentar a quantidade de exemplares do mesmo pesquisados
+                }
+            if(esc ==  5)
+                {
+                 // listar livros cadastrados no BD.
+                }
+
+            }
+    while(esc != 6);
+
     return 0;
 }
+
 
 //ainda não terminei
