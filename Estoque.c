@@ -11,9 +11,10 @@ typedef struct {
 } Produto;
 
 void registrarProdutos(Produto produtos[], int *n) {
+    int i = 0;
     printf("Digite o número de produtos que deseja registrar: ");
     scanf("%d", n);
-    for (int i = 0; i < *n; i++) {
+    for ( ; i < *n; i++) {
         printf("Produto %d:\n", i + 1);
         printf("Código: "); scanf("%d", &produtos[i].codigo);
         printf("Nome: "); scanf("%s", produtos[i].nome);
@@ -23,8 +24,9 @@ void registrarProdutos(Produto produtos[], int *n) {
 }
 
 void listarProdutos(Produto produtos[], int n) {
+    int i = 0;
     printf("Lista de produtos:\n");
-    for (int i = 0; i < n; i++) {
+    for (; i < n; i++) {
         printf("Código: %d, Nome: %s, Quantidade: %d, Preço: %.2f\n",
                produtos[i].codigo, produtos[i].nome, produtos[i].quantidade, produtos[i].preco);
     }
@@ -32,9 +34,10 @@ void listarProdutos(Produto produtos[], int n) {
 
 void atualizarEstoque(Produto produtos[], int n) {
     int codigo, novaQuantidade;
+    int i = 0;
     printf("Digite o código do produto para atualizar: ");
     scanf("%d", &codigo);
-    for (int i = 0; i < n; i++) {
+    for (; i < n; i++) {
         if (produtos[i].codigo == codigo) {
             printf("Nova quantidade para %s: ", produtos[i].nome);
             scanf("%d", &novaQuantidade);
@@ -48,9 +51,10 @@ void atualizarEstoque(Produto produtos[], int n) {
 
 void buscarProduto(Produto produtos[], int n) {
     char nome[50];
+    int i = 0;
     printf("Digite o nome do produto para buscar: ");
     scanf("%s", nome);
-    for (int i = 0; i < n; i++) {
+    for (; i < n; i++) {
         if (strcmp(produtos[i].nome, nome) == 0) {
             printf("Produto encontrado: Código: %d, Nome: %s, Quantidade: %d, Preço: %.2f\n",
                    produtos[i].codigo, produtos[i].nome, produtos[i].quantidade, produtos[i].preco);
@@ -62,7 +66,8 @@ void buscarProduto(Produto produtos[], int n) {
 
 float calcularValorTotalEstoque(Produto produtos[], int n) {
     float valorTotal = 0;
-    for (int i = 0; i < n; i++) {
+    int i = 0;
+    for (; i < n; i++) {
         valorTotal += produtos[i].quantidade * produtos[i].preco;
     }
     return valorTotal;
