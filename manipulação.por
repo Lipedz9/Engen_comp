@@ -12,3 +12,7 @@ programa
 		escreva("o decimal é ", divisao)
 	}
 }
+
+/*O usuário informa um número e o sistema mostra a parte inteira e a parte
+decimal separadas. Por exemplo: ao digitar 5.18, o sistema imprimirá: parte
+inteira = 5 e parte decimal = 0.18*/
