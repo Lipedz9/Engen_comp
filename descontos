@@ -1,0 +1,46 @@
+/*Faça uma solução em Linguagem C para o usuário informar o total a ser
+pago em uma conta e escolher dentre as Opções de Pagamento:
+1. Dinheiro
+2. Cartão de Débito
+3. Cartão de Crédito
+Para a Opção 1, dê desconto de 5%
+Para a Opção 3, acrescente 5% à conta
+Exiba uma mensagem com o valor da conta, o tipo de pagamento, e o valor
+da conta reajustado se a opção for 1 ou 3. Use a estrutura switch case*/
+
+#include <stdio.h>
+
+int main()
+{
+    int op = 0;
+    float total_pg, valor_final;
+
+    printf("digite o valor total a ser pago!\n");
+    scanf("%f", &total_pg);
+
+    printf("Digite a forma de pagamento:\n");
+    printf("****************************\n");
+    printf("* 1 | Dinheiro             *\n");
+    printf("* 2 | Cartão de débito     *\n");
+    printf("* 3 | Cartão de crétido    *\n");
+    printf("****************************\n");
+    scanf("%d",&op);
+
+    switch (op)
+    {
+    case 1:
+        valor_final = total_pg * 0.95;
+        printf("valor pago: %2.f", valor_final);
+        break;
+        case 2:
+        valor_final = total_pg;
+        printf("valor pago: %2.f", valor_final);
+        break;
+        case 3:
+        valor_final = total_pg / 0.95;
+        printf("valor pago: %2.f", valor_final);
+        break;
+
+    }
+    return 0;
+}
